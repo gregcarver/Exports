@@ -1,0 +1,19 @@
+
+ 
+
+
+<div ng-controller="HttpGetController" class="listContainer">
+    <h2 class="profile">News Feed</h2>
+    <div ng-repeat="post in chirps" class="chirps">
+        <span>        
+            <img class="circleIMG" src="https://pbs.twimg.com/profile_images/202558378/superchirp_logo_400x400.png">
+             {{post.user}} :  {{post.message}}
+            <button ng-click="getId(post.id)" class="buttonStyle2">View Single Chirp</button>
+        </span>
+
+        
+
+    </div>
+</div>
+
+  

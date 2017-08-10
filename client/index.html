@@ -1,0 +1,69 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head >
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="app/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-resource.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>
+  </head>
+  <body>
+    
+   <div>
+     <h1 class="headerStyle"><img class="circleIMG" src="https://pbs.twimg.com/profile_images/202558378/superchirp_logo_400x400.png">What the Chirp is Happening? </h1> 
+    <div class="profileTable2">
+      <div class="row">
+        
+          <div class="col-xl-4">
+            <a href="#/"><p class="sideBar2">Home</p></a>
+          </div>
+          <div class="col-xl-4">
+            <a href="#/add"><p class="sideBar2">Add</p></a>
+          </div>
+          <div class="col-xl-4">
+              <a href="#/list"><p class="sideBar2">List</p></a>
+          </div>
+          <div class="col-xl-4">
+              <img src="http://worldartsme.com/images/bird-transparent-clipart-1.jpg" class="greenBird">
+          </div>
+        </div>
+      </div>
+   </div>
+
+
+<div class="row">
+    <div class="col-md-2">
+        <div ng-controller="UserController" >
+         <div class="profileTable"> 
+           <h2 class="profile">Top Profiles</h2>
+           <div ng-repeat="post in pizza" class="sideBar">
+ 
+        <span ng-click="getUser(post.id)"> {{post.users}}</span>
+        </div>
+        
+
+
+    </div>
+
+</div>
+</div>
+<div class="col-md-8">
+      <div ng-view>      
+</div>             
+      
+</div>
+<div class="col-md-2">
+
+</div>
+</div>
+	  <script src="app/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+       <!--<select  ng-click="getUser(users.user)"><option ng-click="getUser(users.user)">User</option></select> -->
+         <!--<img class="circleIMG" src="https://pbs.twimg.com/profile_images/202558378/superchirp_logo_400x400.png">
+             {{post.user}} :  {{post.message}}
+            <button ng-click="getUser(post.user)" class="buttonStyle2">View Single Chirp</button>-->
+</html>

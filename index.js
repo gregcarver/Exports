@@ -2,16 +2,16 @@ var express = require('express')
 var path = require('path')
 var api = require('./api');
 var app = express();
-var router = express.Router()
 var bodyParser = require('body-parser')
+var clientP= path.join(__dirname, 'client')
 
+app.use(express.static(clientP));
 app.use('/api',api);
 app.use(bodyParser.json());
 
 console.log('server on')
 app.listen(3000)
 
-module.exports=router
 
 // var shortid = require('./shortid')
 // var moment = require('./moment')
